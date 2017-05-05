@@ -21,7 +21,7 @@ kong版本为0.10.1，代理端口8000
   		"port": 8001,
   		"reporter_type": "zookeeper",
   		"zk_hosts": [
-    		"112.74.93.133:2181"
+    		"172.16.1.206:2181"
   		],
   		"zk_path": "/infra/services/kong",
   		"check_interval": 20,

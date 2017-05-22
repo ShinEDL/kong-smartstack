@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # 定义环境变量
-IMAGE_NAME="foreveross/kong-smartstack-10"
-CONTAINER_NAME="kong-smartstack-10"
+IMAGE_NAME="foreveross/kong-smartstack-10-2"
+CONTAINER_NAME="kong-smartstack-10-2"
 
 # 构建镜像
 docker build -t $IMAGE_NAME .
@@ -29,7 +29,7 @@ docker run -d \
     -v $PWD:/project \
     -v $PWD/conf/kong-cluster.conf:/etc/kong/kong.conf \
     -v $PWD/plugins/key-auth-redis:/usr/local/share/lua/5.1/kong/plugins/key-auth-redis \
-    -v $PWD/plugins/kong-0.10.1-0.rockspec:/usr/local/lib/luarocks/rocks/kong/0.10.1-0/kong-0.10.1-0.rockspec \
+    -v $PWD/plugins/kong-0.10.2-0.rockspec:/usr/local/lib/luarocks/rocks/kong/0.10.2-0/kong-0.10.2-0.rockspec \
     --net=host \
     --name $CONTAINER_NAME \
     $IMAGE_NAME
